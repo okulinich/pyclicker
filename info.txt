@@ -1,0 +1,20 @@
+- Compile with x11:
+g++ test.cpp -lX11
+
+- Download telegram:
+wget https://telegram.org/dl/desktop/linux?beta=1s
+mv 'linux?beta=1' telegra.tar.xz
+tar -xf telegra.tar.xz
+
+- List all windows and focus on the telegram window
+wmctrl -l
+wmctrl -a Telegram
+
+- Use XTE to open a window and write text
+xte 'mousemove 50 50' && xte 'mousedown 1' && xte 'mouseup 1' && xte 'mousedown 1' && xte 'mouseup 1'
+sleep 5 && xte 'str test'
+
+- Locate an image on the screen with python script
+root@2a6325980f3c:~/Desktop# python3 project/imagegrab.py 
+(277.0, 106.0)
+
